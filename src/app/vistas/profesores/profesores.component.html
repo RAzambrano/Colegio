@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="container">
+
+<table class="table table-hover ">
+  <thead>
+    <tr>
+        <th scope="col">Profesor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let profesor of profesores " (click)="myFn(profesor.nombre);" >
+
+      <td>{{ profesor.nombre }} </td>
+   </tr>
+  </tbody>
+</table>
+
+<table class="table table-hover ">
+  <thead>
+    <tr>
+        <th scope="col">Asignatura </th>
+        <th scope="col">Curso </th>
+        <th scope="col">Estudiantes </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asignatura of asignaturas "  >
+
+      <td>{{ asignatura.nombre }} </td>
+      <td>{{ asignatura.curso }} </td>
+      <td> {{ estudiantes(asignatura.estudiante) }}  </td>
+   </tr>
+  </tbody>
+</table>
+</div>
+
+<app-footer></app-footer>
